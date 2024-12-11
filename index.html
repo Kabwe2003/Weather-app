@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Lusaka Weather App</title>
+  </head>
+  <body>
+    <main class="weather-app">
+      <div class="sidebar" id="sidebar">
+        <div class="search-bar">
+          <input type="text" id="city-input" placeholder="Enter city name" />
+          <button onclick="fetchWeatherByCity()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div id="weather-display">
+          <div class="weather-info">
+            <img
+              id="weather-icon"
+              height="150"
+              width="150"
+              style="margin-inline: auto; margin-block: 60px"
+              alt="Weather Icon"
+            />
+            <h1 id="temperature" style="font-size: 50px"></h1>
+            <p id="condition"></p>
+            <span id="date-time"></span>
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind: <span id="wind"></span> km/h</p>
+            <p id="city-name">Lusaka</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="highlights">
+          <h4>Today's highlights</h4>
+          <div id="highlights-list"></div>
+        </div>
+        <div id="forecast">
+          <h4>5-Day Forecast</h4>
+          <div id="forecast-list"></div>
+        </div>
+
+        <footer>
+          <span class="copyright"
+            >LukupaWard <br />
+            Designed By Charles Kabwe, SIN: 2311456573</span
+          >
+          <ul>
+            <li><a href="https://zrdc.org/">ZRDC</a></li>
+            <li><a href="https://www.icuzambia.net/">ICU Zambia</a></li>
+          </ul>
+        </footer>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
